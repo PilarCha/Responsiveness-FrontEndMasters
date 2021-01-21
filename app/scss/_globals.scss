@@ -51,12 +51,16 @@ a, a:visited, a:hover {
 
 // Visibility
 .hide-for-mobile {
-  @include $breakpoint-down(medium) {
+  //hide for mobiles and tablets
+  @include breakpoint-down(medium) {
     display: none;
   }
 }
 
 .hide-for-desktop {
   // hide for desktop viewport widths]
-  @include $breakpoint-up()
+  @include breakpoint-up(large) {
+    display: none;
+
+  }
 }
